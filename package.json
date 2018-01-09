@@ -1,0 +1,29 @@
+{
+  "name": "zak-grumbles.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zak-grumbles/zak-grumbles.github.io.git"
+  },
+  "author": "Zachary Grumbles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zak-grumbles/zak-grumbles.github.io/issues"
+  },
+  "homepage": "https://github.com/zak-grumbles/zak-grumbles.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0"
+  },
+  "dependencies": {
+    "vue": "^2.5.13"
+  }
+}

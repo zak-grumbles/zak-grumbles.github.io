@@ -1,0 +1,59 @@
+/*
+    Define them colors, boi
+*/
+$licorice: #0F1416;
+$licoriceLight: lighten($licorice, 10%);
+$platinum: #e7e7e7;
+$celadonGreen: #248a81;
+$illuminatingEmerald: #269782;
+$mediumAquamarine: #52e2ad;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar {
+    background-color:$licorice;
+    width: 5em;
+    height:100%;
+    display:inline-block;
+}
+
+#menu {
+    list-style-type:none;
+    height: 100%;
+    width:100%;
+
+    li {
+        width: 100%;
+        height: 4.5em;
+        color: $illuminatingEmerald;
+
+        padding: 1em 0 1em 0;
+
+        i {
+            width: 100%;
+            font-size: 1.5em;
+            text-align:center;
+            margin-top:.25em;
+        }
+    }
+
+    li:hover {
+        background-color: $platinum;
+        color: $celadonGreen;
+    }
+}
+
+.content {
+    width:calc(100% - 10em);
+    background-color: $licoriceLight;
+    display:inline-block;
+}
