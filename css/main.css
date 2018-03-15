@@ -108,3 +108,38 @@ body, html {
     max-width: 500px;
     height: auto;
     transform: translateX(-50%); }
+
+@media screen and (max-width: 480px) {
+  .header {
+    height: 200px; }
+    .header .title {
+      font-size: 1.5em; }
+    .header .subtitle {
+      font-size: 1em; }
+  .content {
+    margin-top: 200px;
+    height: calc(100% - 200px); }
+  .sidebar {
+    display: none !important; }
+  .content-body {
+    margin-left: 0 !important;
+    text-align: center; }
+  .content-section {
+    text-align: center; }
+    .content-section .title {
+      width: 90%;
+      margin: 0 .25em 0 .5em; }
+    .content-section .details {
+      padding-left: 0; }
+  .project {
+    text-align: center;
+    width: 100%; }
+    .project .title {
+      text-align: center; }
+    .project .subtitle {
+      text-align: center; }
+    .project .details {
+      margin-left: .5em;
+      margin-right: .5em; }
+    .project img {
+      width: 50%; } }
