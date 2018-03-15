@@ -111,14 +111,16 @@ body, html {
 
 @media screen and (max-width: 480px) {
   .header {
-    height: 200px; }
+    height: 125px; }
+    .header .titles {
+      padding-top: 2.5em; }
     .header .title {
       font-size: 1.5em; }
     .header .subtitle {
       font-size: 1em; }
   .content {
-    margin-top: 200px;
-    height: calc(100% - 200px); }
+    margin-top: 125px;
+    height: calc(100% - 125px); }
   .sidebar {
     display: none !important; }
   .content-body {

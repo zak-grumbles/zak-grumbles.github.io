@@ -160,7 +160,11 @@ body, html {
 // media queries
 @media screen and (max-width: 480px) {
     .header {
-        height: 200px;
+        height: 125px;
+
+        .titles {
+            padding-top: 2.5em;
+        }
 
         .title {
             font-size: 1.5em;
@@ -172,8 +176,8 @@ body, html {
     }
 
     .content {
-        margin-top: 200px;
-        height: calc(100% - 200px);
+        margin-top: 125px;
+        height: calc(100% - 125px);
     }
 
     .sidebar {
