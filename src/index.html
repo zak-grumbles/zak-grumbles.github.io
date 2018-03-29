@@ -6,6 +6,7 @@
 
         <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'/>
         <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"/>
+        <link href="https://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css" rel="stylesheet"/>
         <link rel='stylesheet' type='text/css' href='css/main.css'/>
     </head>
     <body>
@@ -18,19 +19,19 @@
         <div class='content'>
             <ul class='sidebar'>
                 <li>
-                    <i class="material-icons" aria-hidden="true">person</i>
+                    <i class="material-icons" aria-hidden="true" id="sidebar-about">person</i>
                     <span>About</span>
                 </li>
                 <li>
-                    <i class="material-icons" aria-hidden="true">code</i>
+                    <i class="material-icons" aria-hidden="true" id="sidebar-projects">code</i>
                     <span>Projects</span>
                 </li>
                 <li>
-                    <i class="material-icons" aria-hidden="true">mail</i>
+                    <i class="material-icons" aria-hidden="true" id="sidebar-contact">mail</i>
                     <span>Contact</span>
                 </li>
                 <li>
-                    <i class="devicon-github-plain" aria-hidden="true"></i>
+                    <i class="devicon-github-plain" aria-hidden="true" id="sidebar-github"></i>
                     <span>Github</span>
                 </li>
             </ul>
@@ -42,21 +43,68 @@
                         In my free time I like to dabble in game development and graphics programming.
                         Check the projects section to see what I've been up to.
                     </div>
+                    <div class='project'>
+                        <div class='title'>Skills</div>
+                        <table class='skills'>
+                            <tr>
+                                <td>C/C++</td>
+                                <td>Java</td>
+                                <td>Javascript/Node</td>
+                            </tr>
+                            <tr>
+                                <td>Unity</td>
+                                <td>OpenGL</td>
+                                <td>HTML/CSS/SASS</td>
+                            </tr>
+                            <tr>
+                                <td>C#</td>
+                                <td>SQL</td>
+                                <td>MongoDB</td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
                 <div class='content-section' id='projects'>
                     <div class='title'>Projects</div>
                     <div class='project'>
-                        <div class='title'>terrain-gen - Procedural Terrain Generation in C++</div>
+                        <div class='title'>terrain-gen - Procedural Terrain 
+                            <i class="devicon-cplusplus-line-wordmark"></i>
+                        </div>
                         <div class='details'>
                             This was originally a final project for my graphics class. Terrain is
                             generated using Perlin noise and then the surface of said noise function is
-                            approximated using the Marching Cubes algorithm. All of this is done in the
-                            C++ code, so it does run a little slowly, but the results are pretty.
+                            approximated using the Marching Cubes algorithm. All of this is done on the CPU
+                            so it does run a little slowly, but the results are pretty.
                         </div>
                         <img src='images/top.PNG'/>
+                    </div>
+                    <div class='project'>
+                        <div class='title'>Dank Dungeoneering
+                            <i class="devicons devicons-unity_small"></i>
+                            <i class="devicon-csharp-line-wordmark"></i>
+                            <i class="devicon-mongodb-plain-wordmark"></i>
+                            <i class="devicon-nodejs-plain"></i>
+                        </div>
+                        <div class='details'>
+                            A dank platforming game where you craft your own dungeon while conquering others. Developed in 3 months for university capstone project, 
+                            the game was created using Unity and optimized for the Nvidia Shield tablet. I was responsible for the server backend , the UI, and the enemy AI.
+                        </div>
+                    </div>
+                </div>
+                <div class='content-section' id='contact'>
+                    <div class='title'>Contact Me</div>
+                    <div class='details'>
+                        You can reach me at zakgrumbles@gmail dot com.
                     </div>
                 </div>
             </div>
         </div>
+
+        <script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+              crossorigin="anonymous">
+        </script>
+        <script src="js/bundle.js"></script>
     </body>
 </html>

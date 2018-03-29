@@ -1,1 +1,23 @@
-!function o(u,i,f){function c(n,r){if(!i[n]){if(!u[n]){var e="function"==typeof require&&require;if(!r&&e)return e(n,!0);if(a)return a(n,!0);throw new Error("Cannot find module '"+n+"'")}var t=i[n]={exports:{}};u[n][0].call(t.exports,function(r){var e=u[n][1][r];return c(e||r)},t,t.exports,o,u,i,f)}return i[n].exports}for(var a="function"==typeof require&&require,r=0;r<f.length;r++)c(f[r]);return c}({1:[function(r,e,n){},{}]},{},[1]);
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+function scrollTo(id) {
+    $('.content-body').animate({
+        scrollTop: $(id).offset().top
+    }, 1000);
+}
+
+$('#sidebar-about').click(() => {
+    scrollTo('#about');
+});
+
+$('#sidebar-projects').click(() => {
+    scrollTo('#projects');
+});
+
+$('#sidebar-contact').click(() => {
+
+});
+
+$('#sidebar-github').click(() => {
+    window.open('https://github.com/zak-grumbles', '_blank');
+});
+},{}]},{},[1])

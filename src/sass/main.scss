@@ -27,7 +27,7 @@ body, html {
     color: #fff;
     text-align:center;
     width: 100%;
-    height: 300px;
+    height: 100px;
 
     background: $gradient-blue;
     background: -webkit-linear-gradient(to right, $gradient-blue, $gradient-green);
@@ -36,16 +36,16 @@ body, html {
     box-shadow: 1px 5px 5px $shadow;
 
     .titles {
-        padding: 5em 0 0em 0;
+        padding: 1.5em 0 0em 0;
     }
 
     .title {
-        font-size: 5em;
+        font-size: 1.5em;
         font-family: 'Montserrat Subrayada';
     }
 
     .subtitle {
-        font-size: 2.5em;
+        font-size: 1.25em;
         font-family: 'Montserrat';
     }
 
@@ -53,9 +53,9 @@ body, html {
 }
 
 .content {
-    margin-top: 300px;
+    margin-top: 100px;
     width: 100%;
-    height: calc(100% - 300px);
+    height: calc(100% - 100px);
     overflow:hidden;
     position: fixed;
 }
@@ -135,6 +135,12 @@ body, html {
     }
 }
 
+.content-section:last-of-type {
+    .details {
+        padding-bottom: 1.5em;
+    }
+}
+
 .project {
     margin: 1.5em 0 1.5em 0;
     width: 80%;
@@ -157,27 +163,37 @@ body, html {
     }
 }
 
+.skills {
+    padding: .5em 0 0 1.5em;
+
+    tr {
+        td:first-of-type {
+            padding-left: 0;
+        }
+
+        td {
+            padding: 0.5em 0 0.5em 10em;
+        }
+    }
+}
+
 // media queries
 @media screen and (max-width: 480px) {
     .header {
-        height: 125px;
+        height: 75px;
+    }
 
-        .titles {
-            padding-top: 2.5em;
-        }
-
-        .title {
-            font-size: 1.5em;
-        }
-
-        .subtitle {
-            font-size: 1em;
+    .skills {
+        tr {
+            td {
+                padding-left: 5em !important;
+            }
         }
     }
 
     .content {
-        margin-top: 125px;
-        height: calc(100% - 125px);
+        margin-top: 75px;
+        height: calc(100% - 75px);
     }
 
     .sidebar {
@@ -191,6 +207,7 @@ body, html {
 
     .content-section {
         text-align: center;
+        margin-top: .75em;
 
         .title {
             width: 90%;
@@ -221,6 +238,47 @@ body, html {
 
         img {
             width: 50%;
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .header {
+        height: 100px;
+
+        .titles {
+            padding-top: 1.5em;
+        }
+
+        .title, .subtitle {
+            font-size: 1.25em;
+        }
+    }
+
+    .content {
+        margin-top: 100px;
+        height: calc(100% - 100px);
+    }
+
+    .sidebar {
+        width: 100px;
+
+        span {
+            display: none !important;
+        }
+
+        i {
+            margin: .5em 0 .5em 0;
+        }
+    }
+
+    .content {
+        .content-section {
+            margin: .75em .25em 0 .25em;
+        }
+
+        .content-body {
+            margin-left: 125px;
         }
     }
 }

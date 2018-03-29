@@ -19,9 +19,8 @@ gulp.task('sass-dev', function() {
 gulp.task('src', function() {
     return gulp.src('js/index.js')
         .pipe(browserify({
-            debug: !gulp.env.production
+            debug: false 
         }))
-        .pipe(uglify())
         .pipe(rename({
             basename: 'bundle'
         }))
