@@ -115,15 +115,22 @@ body, html {
 .skills {
   padding: .5em 0 0 1.5em; }
   .skills tr td:first-of-type {
-    padding-left: 0; }
+    padding-left: 0 !important; }
   .skills tr td {
-    padding: 0.5em 0 0.5em 10em; }
+    font-size: 1.25em;
+    padding: 0.5em 0 0.5em 1em; }
+    .skills tr td i {
+      font-size: 3em; }
+
+@media screen and (max-width: 480px) {
+  .skills {
+    padding: 0 .5em 0 .5em !important;
+    margin-left: 50%;
+    transform: translateX(-50%); } }
 
 @media screen and (max-width: 480px) {
   .header {
     height: 75px; }
-  .skills tr td {
-    padding-left: 5em !important; }
   .content {
     margin-top: 75px;
     height: calc(100% - 75px); }
