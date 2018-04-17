@@ -13,7 +13,7 @@ $('#sidebar-projects').click(() => {
 });
 
 $('#sidebar-contact').click(() => {
-
+    scrollTo('#contact');
 });
 
 $('#sidebar-github').click(() => {

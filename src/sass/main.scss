@@ -22,6 +22,16 @@ body, html {
     height: 100%;
 }
 
+a {
+    text-decoration:none;
+    color: $gradient-green;
+    font-style: italic;
+
+    &:hover {
+        text-decoration:underline;
+    }
+}
+
 .header {
     position: fixed;
     color: #fff;
@@ -155,12 +165,6 @@ body, html {
         color: $gradient-green;
     }
 
-    img {
-        margin: .5em 0 0 50%;
-        max-width: 500px;
-        height: auto;
-        transform: translateX(-50%);
-    }
 }
 
 .skills {
@@ -193,8 +197,21 @@ body, html {
     }
 }
 
-@media screen and (min-width: 480px) and (max-width: 960px) {
-    .skills {
+.gallery {
+    margin: 0.5em 0.5em 0 1.5em;
+
+    width: 100%;
+    height: 350px;
+
+    overflow-y:hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+
+    text-align:center;
+
+    img {
+        height:300px;
+        width: auto;
     }
 }
 
