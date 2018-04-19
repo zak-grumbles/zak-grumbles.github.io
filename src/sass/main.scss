@@ -152,7 +152,7 @@ a {
 }
 
 .project {
-    margin: 1.5em 0 1.5em 0;
+    margin: 1em 0 1em 0;
     width: 80%;
 
     .title {
@@ -190,7 +190,7 @@ a {
 // media queries
 @media screen and (max-width: 480px) {
     .skills {
-        padding: 0 .5em 0 .5em !important;
+        padding: 0 .5em 0 0em !important;
 
         margin-left:50%;
         transform: translateX(-50%);
@@ -198,20 +198,46 @@ a {
 }
 
 .gallery {
-    margin: 0.5em 0.5em 0 1.5em;
+    margin: 2em 0.5em 0 1.5em;
 
     width: 100%;
-    height: 350px;
-
-    overflow-y:hidden;
-    overflow-x: auto;
-    white-space: nowrap;
 
     text-align:center;
 
     img {
-        height:300px;
+        height:150px;
         width: auto;
+        cursor:pointer;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.img-viewer-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index:2;
+    cursor:pointer;
+
+    .img-viewer {
+        z-index: 3;
+        width: 75%;
+        margin-left: 50%;
+        margin-top:35%;
+        transform:translateX(-50%);
+
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
 }
 
@@ -268,6 +294,10 @@ a {
         img {
             width: 50%;
         }
+    }
+
+    .gallery {
+        margin-left: 0em !important;
     }
 }
 
