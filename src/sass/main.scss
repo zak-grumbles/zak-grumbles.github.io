@@ -208,6 +208,12 @@ a {
         height:150px;
         width: auto;
         cursor:pointer;
+
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select:none;
     }
 }
 
@@ -229,14 +235,19 @@ a {
 
     .img-viewer {
         z-index: 3;
-        width: 75%;
-        margin-left: 50%;
-        margin-top:35%;
+        width: 50%;
+        margin-left: calc(50% + 100px);
+        margin-top:calc(100px + 1.5em);
         transform:translateX(-50%);
 
         img {
-            width: 100%;
+            width: 75%;
             height: auto;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select:none;
         }
     }
 }
@@ -253,6 +264,16 @@ a {
 
     .sidebar {
         display: none !important;
+    }
+
+    .img-viewer {
+        margin-left: 50% !important;
+        width: 75% !important;
+
+        img {
+            width: 100% !important;
+            height: auto;
+        }
     }
 
     .content-body {
