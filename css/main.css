@@ -161,12 +161,13 @@ a {
   .img-viewer-overlay .img-viewer {
     z-index: 3;
     width: 50%;
-    margin-left: calc(50% + 100px);
+    margin-left: calc(50%);
     margin-top: calc(100px + 1.5em);
     transform: translateX(-50%); }
     .img-viewer-overlay .img-viewer img {
-      width: 75%;
-      height: auto;
+      height:50%;
+      width:auto;
+      max-width: 1000px;
       -webkit-user-select: none;
       -moz-user-select: none;
       -ms-user-select: none;
