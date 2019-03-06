@@ -56,30 +56,30 @@ a {
   list-style-type: none;
   box-shadow: 2px 5px 5px #aaa; }
   .sidebar li {
-    margin-left: 2em; }
-  .sidebar i {
-    color: #fff;
-    background-color: #134e5e;
-    padding: .25em;
-    border-radius: 50%;
-    margin: 1em 0 1em 0;
+    margin-left: 2em;
     cursor: pointer; }
-  .sidebar i[class^="devicon"] {
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;
-    line-height: 1;
-    letter-spacing: normal;
-    text-transform: none;
-    display: inline-block;
-    white-space: nowrap;
-    word-wrap: normal;
-    direction: ltr;
-    -moz-font-feature-settings: 'liga';
-    -moz-osx-font-smoothing: grayscale; }
-  .sidebar span {
-    font-family: 'Montserrat';
-    font-style: italic; }
+    .sidebar li i {
+      color: #fff;
+      background-color: #134e5e;
+      padding: .25em;
+      border-radius: 50%;
+      margin: 1em 0 1em 0; }
+    .sidebar li i[class^="devicon"] {
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -moz-font-feature-settings: 'liga';
+      -moz-osx-font-smoothing: grayscale; }
+    .sidebar li span {
+      font-family: 'Montserrat';
+      font-style: italic; }
 
 .content-body {
   height: 100%;
@@ -120,7 +120,8 @@ a {
     padding-left: 0 !important; }
   .skills tr td {
     font-size: 1.25em;
-    padding: 0.5em 0 0.5em 1em; }
+    padding: 0.5em 0 0.5em 1em;
+    text-align: center; }
     .skills tr td i {
       font-size: 3em; }
 
@@ -161,13 +162,12 @@ a {
   .img-viewer-overlay .img-viewer {
     z-index: 3;
     width: 50%;
-    margin-left: calc(50%);
+    margin-left: calc(50% + 100px);
     margin-top: calc(100px + 1.5em);
     transform: translateX(-50%); }
     .img-viewer-overlay .img-viewer img {
-      height:50%;
-      width:auto;
-      max-width: 1000px;
+      width: 75%;
+      height: auto;
       -webkit-user-select: none;
       -moz-user-select: none;
       -ms-user-select: none;
