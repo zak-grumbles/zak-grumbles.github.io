@@ -1,0 +1,21 @@
+/**
+ * src/styles/settings.scss
+ *
+ * Configures SASS variables and Vuetify overwrites
+ */
+
+// https://vuetifyjs.com/features/sass-variables/`
+@use 'vuetify/settings' with (
+  $color-pack: false
+);
+
+// Color scheme
+$white-warm: #fefae0;
+$base-green: #606c38;
+$green-dark: #283618;
+$base-tan: #dda15e;
+$base-orange: #bc6c25;
+
+html {
+    font-family: 'EB Garamond', serif;
+}
