@@ -5,7 +5,7 @@
  */
 
 // https://vuetifyjs.com/features/sass-variables/`
-@use 'vuetify/settings' with (
+@forward 'vuetify/settings' with (
   $color-pack: false
 );
 
@@ -15,7 +15,3 @@ $base-green: #606c38;
 $green-dark: #283618;
 $base-tan: #dda15e;
 $base-orange: #bc6c25;
-
-html {
-    font-family: 'EB Garamond', serif;
-}
