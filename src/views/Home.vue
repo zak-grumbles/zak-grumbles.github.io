@@ -1,7 +1,9 @@
 <template>
-  <About />
+  <Header />
+  <Cards />
 </template>
 
 <script lang="ts" setup>
-  import About from '@/components/About.vue'
+  import Header from '@/components/Header.vue'
+  import Cards from '@/components/Cards.vue'
 </script>
