@@ -12,7 +12,9 @@
     </template>
 
     <v-app-bar-title>
-      Zak Grumbles
+      <span class="d-none d-sm-flex">
+        Zak Grumbles
+      </span>
     </v-app-bar-title>
 
     <v-spacer></v-spacer>
@@ -31,29 +33,29 @@
 </template>
 
 <script lang="ts">
-  import { defineComponent } from 'vue'
+import { defineComponent } from 'vue'
 
-  export default defineComponent({
-    data() {
-      return {
-        drawer: false
-      }
+export default defineComponent({
+  data() {
+    return {
+      drawer: false
     }
-  })
+  }
+})
 </script>
 
 <style scoped lang="scss">
-  @import "@/styles/settings.scss";
+@import "@/styles/settings.scss";
 
-  .v-app-bar-title {
-    color: $white-warm;
-  }
+.v-app-bar-title {
+  color: $white-warm;
+}
 
-  .v-app-bar-nav-icon {
-    color: $white-warm;
-  }
+.v-app-bar-nav-icon {
+  color: $white-warm;
+}
 
-  .v-icon {
-    color: $white-warm;
-  }
+.v-icon {
+  color: $white-warm;
+}
 </style>
