@@ -76,6 +76,38 @@
                     </v-row>
                 </v-col>
             </v-row>
+            <v-row>
+                <v-col>
+                    <v-row dense>
+                        <v-col>
+                            <span class="text-h6 resume-section-header pr-6">
+                                Projects
+                            </span>
+                        </v-col>
+                    </v-row>
+                    <v-row dense v-for="proj in projects">
+                        <v-col>
+                            <v-row dense>
+                                <v-col>
+                                    <span class="font-weight-medium">
+                                        {{ proj.name }}
+                                    </span>
+                                    <span>
+                                        - {{ proj.link }}
+                                    </span>
+                                </v-col>
+                            </v-row>
+                            <v-row dense>
+                                <v-col>
+                                    <span>
+                                        {{ proj.description }}
+                                    </span>
+                                </v-col>
+                            </v-row>
+                        </v-col>
+                    </v-row>
+                </v-col>
+            </v-row>
         </v-sheet>
     </v-responsive>
 </template>
@@ -105,6 +137,17 @@ const experience = ref([
             and best-practices, several of which have gone on to lead teams of \
             their own.'
         ]
+    }
+])
+
+const projects = ref([
+    {
+        name: 'Terrain Gen',
+        link: 'github.com/zak-grumbles/terrain-gen',
+        description: 'Procedural terrain generator written in C++ \
+        and OpenGL, utilizing verious types of noise to generate \
+        terrain. Recently re-written to feature a more modern user \
+        interface using the QT Framework'
     }
 ])
 
