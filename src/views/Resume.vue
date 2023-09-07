@@ -3,14 +3,14 @@
         <v-sheet border elevation="2" class="py-4 px-4 resume-sheet">
             <v-row class="resume-header-row">
                 <v-col>
-                    <span class="text-h6 text-md-h5 pr-6" id="resume-name">
+                    <span class="text-h6 pr-6" id="resume-name">
                         Zak Grumbles
                     </span>
                 </v-col>
             </v-row>
             <v-row dense class="resume-header-row">
                 <v-col>
-                    <span class="text-h6 text-md-h5" id="resume-title">
+                    <span class="text-h6" id="resume-title">
                         Software Engineer III
                     </span>
                 </v-col>
@@ -23,7 +23,7 @@
             <v-row>
                 <v-col cols="12">
                     <v-row dense>
-                        <v-col cols="4">
+                        <v-col>
                             <span class="text-h6 resume-section-header pr-6">
                                 About Me
                             </span>
@@ -41,7 +41,25 @@
             <v-row>
                 <v-col>
                     <v-row dense>
-                        <v-col cols="4">
+                        <v-col>
+                            <span class="text-h6 resume-section-header pr-6">
+                                Skills
+                            </span>
+                        </v-col>
+                    </v-row>
+                    <v-row dense>
+                        <v-col>
+                            <span class="font-weight-medium">
+                                Technical
+                            </span>
+                        </v-col>
+                    </v-row>
+                </v-col>
+            </v-row>
+            <v-row>
+                <v-col>
+                    <v-row dense>
+                        <v-col>
                             <span class="text-h6 resume-section-header pr-6">
                                 Experience
                             </span>
@@ -89,11 +107,8 @@
                         <v-col>
                             <v-row dense>
                                 <v-col>
-                                    <span class="font-weight-medium">
+                                    <span class="font-weight-medium mr-2">
                                         {{ proj.name }}
-                                    </span>
-                                    <span>
-                                        - {{ proj.link }}
                                     </span>
                                 </v-col>
                             </v-row>
@@ -150,6 +165,19 @@ const projects = ref([
         interface using the QT Framework'
     }
 ])
+
+const skills = ref({
+    technical: [
+        'C#', 'UI design & dev', 'SQL',
+        'REST APIs', 'Unity', 'Linux',
+        'Full Stack', 'CI/CD', 'Git'
+    ],
+    soft: [
+        'Communication', 'Flexibility', 'Leadership',
+        'Problem Solving', 'Creativity', 'Negotiation',
+        'Collaborative Personality'
+    ]
+})
 
 </script>
 
