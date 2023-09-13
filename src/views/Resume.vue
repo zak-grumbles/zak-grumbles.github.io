@@ -55,7 +55,7 @@
                         </v-col>
                     </v-row>
                     <v-row dense class="d-flex">
-                        <v-col cols="3" v-for="skill in skills.technical">
+                        <v-col cols="3" v-for="skill in skills.technical" :key="skill">
                             <span>{{ skill }}</span>
                         </v-col>
                     </v-row>
@@ -67,7 +67,7 @@
                         </v-col>
                     </v-row>
                     <v-row dense class="d-flex">
-                        <v-col cols="3" v-for="skill in skills.soft">
+                        <v-col cols="3" v-for="skill in skills.soft" :key="skill">
                             <span>{{ skill }}</span>
                         </v-col>
                     </v-row>
@@ -82,7 +82,7 @@
                             </span>
                         </v-col>
                     </v-row>
-                    <v-row dense v-for="exp in experience">
+                    <v-row dense v-for="exp in experience" :key="exp.title">
                         <v-col>
                             <v-row dense>
                                 <v-col>
@@ -101,7 +101,7 @@
                             <v-row dense>
                                 <v-col class="mx-6">
                                     <ul class="exp-items">
-                                        <li v-for="item in exp.items">
+                                        <li v-for="item in exp.items" :key="item">
                                             {{ item }}
                                         </li>
                                     </ul>
@@ -120,7 +120,7 @@
                             </span>
                         </v-col>
                     </v-row>
-                    <v-row dense v-for="proj in projects">
+                    <v-row dense v-for="proj in projects" :key="proj.name">
                         <v-col>
                             <v-row dense>
                                 <v-col>

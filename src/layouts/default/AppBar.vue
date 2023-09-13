@@ -30,7 +30,7 @@
 
   <v-navigation-drawer temporary v-model="drawer">
     <v-list nav>
-      <v-list-item v-for="item in navItems"
+      <v-list-item v-for="item in navItems" :key="item.name"
         :title="item.name" :to="item.path" exact>
       </v-list-item>
     </v-list>
