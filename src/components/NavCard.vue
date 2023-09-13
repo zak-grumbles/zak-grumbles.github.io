@@ -2,12 +2,13 @@
     <v-responsive :aspect-ratio="4 / 3" min-height="150">
         <v-hover>
             <div class="nav-card fill-height pa-3">
-            <v-sheet v-bind="props" rounded class="nav-card-sheet fill-height transition-swing" 
-                :style="{ backgroundImage: `url(${background})` }">
-                <div class="fill-height nav-card-body d-flex flex-row justify-center align-center" no-gutters>
-                    <span class="text-h6">{{ title }}</span>
-                </div>
-            </v-sheet>
+                <v-sheet v-bind="props" rounded class="nav-card-sheet fill-height transition-swing"
+                    :style="{ backgroundImage: `url(${background})` }"
+                    @click="onCardClicked">
+                    <div class="fill-height nav-card-body d-flex flex-row justify-center align-center" no-gutters>
+                        <span class="text-h6">{{ title }}</span>
+                    </div>
+                </v-sheet>
             </div>
         </v-hover>
     </v-responsive>
@@ -15,6 +16,7 @@
 
 <style lang="scss" scoped>
 @import "@/styles/settings.scss";
+
 .nav-card-sheet {
     position: relative;
     background-position: center;
@@ -44,15 +46,23 @@ span {
     text-justify: center;
     height: min-content;
 }
-
 </style>
 
 <script setup lang="ts">
+import router from '@/router/index';
+
 interface CardProps {
     title?: string,
-    background?: string
+    background?: string,
+    to?: string
 }
 
-defineProps<CardProps>()
+const props: CardProps = defineProps<CardProps>()
+
+function onCardClicked(): void {
+    if (props.to) {
+        router.push(props.to)
+    }
+}
 
 </script>

@@ -1,14 +1,14 @@
 <template>
   <v-app-bar :elevation="2" image="@/assets/bg-forest.jpg">
 
-
+    <!--
     <template v-slot:image>
       <v-img gradient="to top right, rgba(19,84,100,.02), rgba(128,208,199,.2)"></v-img>
     </template>
+  -->
 
     <template v-slot:prepend>
-      <v-app-bar-nav-icon @click.stop="drawer != drawer">
-      </v-app-bar-nav-icon>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
     </template>
 
     <v-app-bar-title>
@@ -17,31 +17,42 @@
       </span>
     </v-app-bar-title>
 
-    <v-spacer></v-spacer>
+    <template v-slot:append>
+      <v-btn icon href="https://github.com/zak-grumbles" target="_blank">
+        <v-icon>mdi-github</v-icon>
+      </v-btn>
 
-    <v-btn icon href="https://github.com/zak-grumbles" target="_blank">
-      <v-icon>mdi-github</v-icon>
-    </v-btn>
-
-    <v-btn icon>
-      <v-icon>mdi-linkedin</v-icon>
-    </v-btn>
+      <v-btn icon>
+        <v-icon>mdi-linkedin</v-icon>
+      </v-btn>
+    </template>
   </v-app-bar>
 
-  <v-navigation-drawer v-model="drawer" temporary>
+  <v-navigation-drawer temporary v-model="drawer">
+    <v-list nav>
+      <v-list-item v-for="item in navItems"
+        :title="item.name" :to="item.path" exact>
+      </v-list-item>
+    </v-list>
   </v-navigation-drawer>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script lang="ts" setup>
+import { ref } from 'vue'
 
-export default defineComponent({
-  data() {
-    return {
-      drawer: false
-    }
-  }
-})
+interface NavItem {
+  name: string,
+  path: string
+}
+
+const navItems = ref<NavItem[]>([
+  { name: 'Home', path: '/' },
+  { name: 'Resume', path: 'resume' },
+  { name: 'About Me', path: 'about' }
+])
+
+const drawer = ref(false)
+
 </script>
 
 <style scoped lang="scss">
@@ -57,5 +68,17 @@ export default defineComponent({
 
 .v-icon {
   color: $white-warm;
+}
+
+.v-navigation-drawer {
+  background-image: url("@/assets/bg-forest.jpg");
+  background-size: cover;
+
+  .v-list {
+    background: transparent;
+  }
+  .v-list-item {
+    color: $white-warm;
+  }
 }
 </style>

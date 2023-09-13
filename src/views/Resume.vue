@@ -47,11 +47,28 @@
                             </span>
                         </v-col>
                     </v-row>
-                    <v-row dense>
+                    <v-row class="mt-0">
                         <v-col>
                             <span class="font-weight-medium">
                                 Technical
                             </span>
+                        </v-col>
+                    </v-row>
+                    <v-row dense class="d-flex">
+                        <v-col cols="3" v-for="skill in skills.technical">
+                            <span>{{ skill }}</span>
+                        </v-col>
+                    </v-row>
+                    <v-row>
+                        <v-col>
+                            <span class="font-weight-medium">
+                                Soft
+                            </span>
+                        </v-col>
+                    </v-row>
+                    <v-row dense class="d-flex">
+                        <v-col cols="3" v-for="skill in skills.soft">
+                            <span>{{ skill }}</span>
                         </v-col>
                     </v-row>
                 </v-col>
@@ -168,9 +185,10 @@ const projects = ref([
 
 const skills = ref({
     technical: [
-        'C#', 'UI design & dev', 'SQL',
+        'C/C++', 'C#', 'Vue 3', 'Vuetify',
         'REST APIs', 'Unity', 'Linux',
-        'Full Stack', 'CI/CD', 'Git'
+        'Full Stack', 'CI/CD', 'Git',
+        'Typescript'
     ],
     soft: [
         'Communication', 'Flexibility', 'Leadership',
