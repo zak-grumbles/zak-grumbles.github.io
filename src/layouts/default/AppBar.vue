@@ -1,12 +1,6 @@
 <template>
   <v-app-bar :elevation="2" image="@/assets/bg-forest.jpg">
 
-    <!--
-    <template v-slot:image>
-      <v-img gradient="to top right, rgba(19,84,100,.02), rgba(128,208,199,.2)"></v-img>
-    </template>
-  -->
-
     <template v-slot:prepend>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
     </template>
@@ -48,6 +42,7 @@ interface NavItem {
 const navItems = ref<NavItem[]>([
   { name: 'Home', path: '/' },
   { name: 'Resume', path: 'resume' },
+  { name: 'Projects', path: 'projects' },
   { name: 'About Me', path: 'about' }
 ])
 

@@ -5,7 +5,7 @@
 
             <div class="text-h4 mt-3 mb-2 text-center">Hi! I'm Zak.</div>
             <div class="text-subtitle-1 mb-2 text-center">
-                I make software. Front-end, back-end, or world-ending, I can do it.
+                I make software. Some of it is even good. Front-end, back-end, or world-ending, I can do it.
             </div>
             <div class="text-subtitle-2 font-italic font-weight-light">
                 (For legal reasons, the world-ending part is a joke.)

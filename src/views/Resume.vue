@@ -67,7 +67,7 @@
                         </v-col>
                     </v-row>
                     <v-row dense class="d-flex">
-                        <v-col cols="3" v-for="skill in skills.soft" :key="skill">
+                        <v-col xs="5" md="3" v-for="skill in skills.soft" :key="skill">
                             <span>{{ skill }}</span>
                         </v-col>
                     </v-row>
@@ -140,6 +140,35 @@
                     </v-row>
                 </v-col>
             </v-row>
+            <v-row>
+                <v-col>
+                    <v-row dense>
+                        <v-col>
+                            <span class="text-h6 resume-section-header pr-6">
+                                Education
+                            </span>
+                        </v-col>
+                    </v-row>
+                    <v-row dense v-for="edu in education" :key="edu.school">
+                        <v-col>
+                            <v-row dense>
+                                <v-col>
+                                    <span class="font-weight-medium mr-2">
+                                        {{ edu.school }}, {{ edu.years }}
+                                    </span>
+                                </v-col>
+                            </v-row>
+                            <v-row dense>
+                                <v-col>
+                                    <span>
+                                        {{ edu.degree }}
+                                    </span>
+                                </v-col>
+                            </v-row>
+                        </v-col>
+                    </v-row>
+                </v-col>
+            </v-row>
         </v-sheet>
     </v-responsive>
 </template>
@@ -180,6 +209,21 @@ const projects = ref([
         and OpenGL, utilizing verious types of noise to generate \
         terrain. Recently re-written to feature a more modern user \
         interface using the QT Framework'
+    },
+    {
+        name: 'zak-grumbles.com (This website!)',
+        link: 'github.com/zak/grumbles/zak-grumbles.github.io',
+        description: 'This website was built using Vue 3 and Vuetify. \
+        Scripting was written in Typescript and the styling was done \
+        using SCSS.'
+    }
+])
+
+const education = ref([
+    {
+        school: 'Baylor University',
+        years: 'Aug 2013 - May 2017',
+        degree: 'BSCS in Computer Science'
     }
 ])
 

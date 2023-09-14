@@ -1,7 +1,7 @@
 <template>
     <v-container class="d-flex flex-column flex-sm-row justify-center">
         <NavCard :background="resumeImg" title="Resume" to="/resume"/>
-        <NavCard :background="projectsImg" title="Projects"/>
+        <NavCard :background="projectsImg" title="Projects" to="/projects"/>
         <NavCard :background="aboutImg" title="About Me" />
     </v-container>
 </template>
