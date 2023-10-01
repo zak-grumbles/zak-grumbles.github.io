@@ -1,26 +1,26 @@
 <template>
     <v-responsive class="px-3 py-4">
-        <v-card border elevation="2" class="py-4 px-4" v-for="proj in projects" :key="proj.name">
-            <v-row class="project-title" align="center" no-gutters>
-                <v-col>
-                    <span class="text-h4">{{ proj.name }}</span>
-                </v-col>
-                <v-spacer></v-spacer>
-                <v-col cols="1" v-for="icon in proj.stackIcons" :key="icon">
-                    <i :class="['devicon-' + icon, 'project-tech']" />
-                </v-col>
-            </v-row>
-            <v-row>
-                <v-col cols="7" v-if="proj.screenshot">
-                    <v-img :src="proj.screenshot" cover></v-img>
-                </v-col>
-                <v-col>
+        <v-card border elevation="2" class="py-4 px-4 mb-4" v-for="proj in projects" :key="proj.name">
+            <div class="d-flex project-title" align="center" no-gutters>
+                <div class="me-auto">
+                    <span class="text-h6 text-lg-h4">{{ proj.name }}</span>
+                </div>
+                <div>
+                    <i v-for="icon in proj.stackIcons" :key="icon" :class="['devicon-' + icon, 'project-tech']"
+                        class="mx-xs-1 mx-sm-2 mx-md-4" />
+                </div>
+            </div>
+            <div class="d-flex flex-wrap">
+                <div v-if="proj.screenshot" class="flex-0-0-100" max-width="50%">
+                    <v-img :src="proj.screenshot" aspect-ratio="16/9"></v-img>
+                </div>
+                <div>
                     <p v-for="(paragraph, index) in proj.info" :key="paragraph"
                         :class="[index !== proj.info.length ? 'mb-4' : '', 'project-info']">
                         <span v-html="paragraph"></span>
                     </p>
-                </v-col>
-            </v-row>
+                </div>
+            </div>
         </v-card>
     </v-responsive>
 </template>
@@ -54,6 +54,20 @@ const projects = ref<Project[]>([
             progress and there are quite a few features I want to add, but I\'m quite proud of how far it\'s \
             come.'
         ]
+    },
+    {
+        name: 'zak-grumbles.com',
+        stackIcons: [
+            'vuejs-plain',
+            'vuetify-line',
+            'typescript-plain'
+        ],
+        info: [
+            'My personal website has gone through several iterations, some better than others. \
+            This iteration was built using <a href="https://vuejs.org" target="_blank">Vue 3</a>, \
+            <a href="https://vuetifyjs.com" target="_blank">Vuetify</a>, and \
+            <a href="https://typescriptlang.org" target="_blank">Typescript</a>.'
+        ]
     }
 ])
 </script>
@@ -67,6 +81,18 @@ const projects = ref<Project[]>([
 }
 
 .project-tech {
-    font-size: 4em;
+    font-size: 2em;
+}
+
+a {
+    color: $base-orange;
+    text-decoration-color: $base-green;
+
+}
+
+a:active,
+a:visited {
+    color: $green-dark;
+    text-decoration-color: $base-orange;
 }
 </style>
