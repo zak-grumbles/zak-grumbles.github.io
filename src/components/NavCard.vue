@@ -20,6 +20,7 @@
 .nav-card-sheet {
     position: relative;
     background-position: center;
+    background-size: cover;
     cursor: pointer;
     box-shadow: 3px 3px 3px rgba(0.0, 0.0, 0.0, 0.3);
     transition: box-shadow 0.2s ease-in-out;

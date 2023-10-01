@@ -16,7 +16,7 @@
         <v-icon>mdi-github</v-icon>
       </v-btn>
 
-      <v-btn icon>
+      <v-btn icon href="https://www.linkedin.com/in/zak-grumbles/" target="_blank">
         <v-icon>mdi-linkedin</v-icon>
       </v-btn>
     </template>
@@ -43,7 +43,6 @@ const navItems = ref<NavItem[]>([
   { name: 'Home', path: '/' },
   { name: 'Resume', path: 'resume' },
   { name: 'Projects', path: 'projects' },
-  { name: 'About Me', path: 'about' }
 ])
 
 const drawer = ref(false)
