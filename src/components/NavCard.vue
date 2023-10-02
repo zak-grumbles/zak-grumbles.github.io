@@ -15,8 +15,6 @@
 </template>
 
 <style lang="scss" scoped>
-@import "@/styles/settings.scss";
-
 .nav-card-sheet {
     position: relative;
     background-position: center;
@@ -42,11 +40,12 @@
 }
 
 span {
-    color: $white-warm;
+    color: rgb(var(--v-theme-primary-warm));
     text-align: center;
     text-justify: center;
     height: min-content;
 }
+
 </style>
 
 <script setup lang="ts">

@@ -244,25 +244,23 @@ const skills = ref({
 </script>
 
 <style lang="scss" scoped>
-@import "@/styles/settings.scss";
-
 .resume-header-row {
     & #resume-name {
-        color: $base-orange;
-        border-bottom: 2px solid $base-green;
+        color: rgb(var(--v-theme-accent));
+        border-bottom: 2px solid rgb(var(--v-theme-primary-dark));;
     }
 
     & #resume-title {
-        color: $green-dark;
+        color: rgb(var(--v-theme-primary-dark));
     }
 }
 
 .resume-section-header {
-    color: $base-green;
-    border-bottom: 2px solid $base-tan;
+    color: rgb(var(--v-theme-primary));
+    border-bottom: 2px solid rgb(var(--v-theme-secondary));
 }
 
 .v-divider {
-    color: $base-green;
+    color: rgb(var(--v-theme-primary));
 }
 </style>

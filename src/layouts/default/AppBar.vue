@@ -2,7 +2,7 @@
   <v-app-bar :elevation="2" image="@/assets/bg-forest.jpg">
 
     <template v-slot:prepend>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"/>
     </template>
 
     <v-app-bar-title>
@@ -50,18 +50,9 @@ const drawer = ref(false)
 </script>
 
 <style scoped lang="scss">
-@import "@/styles/settings.scss";
 
-.v-app-bar-title {
-  color: $white-warm;
-}
-
-.v-app-bar-nav-icon {
-  color: $white-warm;
-}
-
-.v-icon {
-  color: $white-warm;
+.v-app-bar-title, .v-app-bar-nav-icon, .v-icon, .v-list-item {
+  color: rgb(var(--v-theme-primary-warm));
 }
 
 .v-navigation-drawer {
@@ -70,9 +61,6 @@ const drawer = ref(false)
 
   .v-list {
     background: transparent;
-  }
-  .v-list-item {
-    color: $white-warm;
   }
 }
 </style>

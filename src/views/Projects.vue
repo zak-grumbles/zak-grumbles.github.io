@@ -76,8 +76,8 @@ const projects = ref<Project[]>([
 @import "@/styles/settings.scss";
 
 .project-title {
-    color: $base-green;
-    border-bottom: 2px solid $base-tan;
+    color: rgb(var(--v-theme-primary));
+    border-bottom: 2px solid rgb(var(--v-theme-secondary));
 }
 
 .project-tech {
@@ -85,14 +85,14 @@ const projects = ref<Project[]>([
 }
 
 a {
-    color: $base-orange;
-    text-decoration-color: $base-green;
+    color: rgb(var(--v-theme-accent));
+    text-decoration-color: rgb(var(--v-theme-primary));
 
 }
 
 a:active,
 a:visited {
-    color: $green-dark;
-    text-decoration-color: $base-orange;
+    color: rgb(var(--v-theme-primary-dark));
+    text-decoration-color: rgb(var(--v-theme-accent));
 }
 </style>

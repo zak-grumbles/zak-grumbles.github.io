@@ -17,10 +17,8 @@
 </template>
 
 <style scoped lang="scss">
-    @import "@/styles/settings.scss";
-
     .v-divider {
-        color: $green-dark;
+        color: var(--v-theme-primary-dark);
     }
 </style>
 

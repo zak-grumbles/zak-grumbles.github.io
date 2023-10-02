@@ -3,5 +3,7 @@
 </template>
 
 <script lang="ts" setup>
-  //
+import { useTheme } from 'vuetify'
+const theme = useTheme() 
+
 </script>
