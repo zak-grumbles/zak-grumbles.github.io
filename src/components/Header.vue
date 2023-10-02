@@ -18,7 +18,7 @@
 
 <style scoped lang="scss">
     .v-divider {
-        color: var(--v-theme-primary-dark);
+        color: rgb(var(--v-theme-contrast));
     }
 </style>
 
