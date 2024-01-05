@@ -28,6 +28,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 import tgScreenshot from '@/assets/terrain-gen.png'
+import gdfnScreenshot from '@/assets/gdfn.png'
 
 interface Project {
     name: string,
@@ -37,6 +38,22 @@ interface Project {
 }
 
 const projects = ref<Project[]>([
+    {
+        name: 'gd_fastnoise2',
+        stackIcons: [
+            'godot-plain-wordmark',
+            'cplusplus-plain'
+        ],
+        screenshot: gdfnScreenshot,
+        info: [
+            'A work in progress extension for the \
+            <a href="https://godotengine.org/" target="_blank">Godot Engine</a> \
+            that wraps the fantastic \
+            <a href="https://github.com/auburn/fastnoise2" target="_blank">FastNoise2 library</a>. \
+            It essentially just wraps the various FastNoise2 objects and allows them to be used via \
+            GDScript.'
+        ]
+    },
     {
         name: 'Terrain-Gen',
         stackIcons: [
