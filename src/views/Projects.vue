@@ -29,6 +29,7 @@
 import { ref } from 'vue';
 import tgScreenshot from '@/assets/terrain-gen.png'
 import gdfnScreenshot from '@/assets/gdfn.png'
+import albaScreenshot from '@/assets/alba.png'
 
 interface Project {
     name: string,
@@ -52,6 +53,19 @@ const projects = ref<Project[]>([
             <a href="https://github.com/auburn/fastnoise2" target="_blank">FastNoise2 library</a>. \
             It essentially just wraps the various FastNoise2 objects and allows them to be used via \
             GDScript.'
+        ]
+    },
+    {
+        name: 'Alba',
+        stackIcons: [
+            'godot-plain-wordmark'
+        ],
+        screenshot: albaScreenshot,
+        info: [
+            'A work in progress successor to my Terrain-Gen project still in early development, \
+            Alba will be a fully featured node-based terrain creation studio. It is being built in the \
+            <a href="https://godotengine.org/" target="_blank">Godot Engine</a> and utilizes my \
+            gd_fastnoise2 module.'
         ]
     },
     {
