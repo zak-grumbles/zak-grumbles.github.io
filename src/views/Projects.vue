@@ -14,8 +14,10 @@
                 <div v-if="proj.screenshot" class="flex-0-0-100" max-width="50%">
                     <v-img :src="proj.screenshot" aspect-ratio="16/9"></v-img>
                 </div>
-                <div v-if="proj.clip" class="flex-0-0-100 clip-container" max-width="50%">
-                    <video-player :src="proj.clip" contain/>
+                <div v-if="proj.clip" class="flex-0-0-100">
+                    <video controls muted class="clip-player">
+                        <source :src="proj.clip" type="video/mp4" />
+                    </video>
                 </div>
                 <div>
                     <p v-for="(paragraph, index) in proj.info" :key="paragraph"
@@ -30,19 +32,18 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { VideoPlayer } from 'vue-md-player'
-import 'vue-md-player/dist/style.css'
 import tgScreenshot from '@/assets/terrain-gen.png'
 import gdfnScreenshot from '@/assets/gdfn.png'
 import albaScreenshot from '@/assets/alba.png'
+import r3dGif from '@/assets/r3d_clip.gif'
 import r3dClip from '@/assets/r3d_clip.mp4'
 
 interface Project {
     name: string,
     stackIcons: string[],
     screenshot?: string,
-    clip?: string,
-    info: string[]
+    info: string[],
+    clip?: string
 }
 
 const projects = ref<Project[]>([
@@ -59,7 +60,6 @@ const projects = ref<Project[]>([
             'The theme of the game jam was "What\'s Behind The Door?", thus the ragdoll launching doors. \
             The first person swinging mechanic is heavily inspired by the feel of Spiderman PS4. \
             This was my first project in Unreal Engine 5 and served as a fantastic learning experience.',
-            '<a href=https://zeegeedev.itch.io/ragdoll-door-dillema target="_blank">Download on Itch.io</a>'
         ],
         clip: r3dClip
     },
@@ -139,8 +139,10 @@ const projects = ref<Project[]>([
     font-size: 2em;
 }
 
-.clip-container {
-    min-height: 500px;
+.clip-player {
+    width: 100%;
+    height:auto;
+    max-height: 500px;
 }
 
 a {
