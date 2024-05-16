@@ -4,12 +4,17 @@
  * webfontloader documentation: https://github.com/typekit/webfontloader
  */
 
-export async function loadFonts () {
+export async function loadFonts() {
   const webFontLoader = await import(/* webpackChunkName: "webfontloader" */'webfontloader')
 
   webFontLoader.load({
     google: {
-      families: ['Roboto:100,300,400,500,700,900&display=swap', 'EB Garamond', 'Cutive Mono'],
+      families: [
+        'Neucha:400',
+        'Roboto:100,300,400,500,700,900&display=swap',
+        'EB Garamond',
+        'Cutive Mono'
+      ],
     },
   })
 }
