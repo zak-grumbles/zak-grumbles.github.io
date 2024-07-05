@@ -1,5 +1,7 @@
 <template>
-    <div>
-        <h1>Testing</h1>
+    <div class="w-full h-full bg-street bg-cover bg-center blur-sm">
     </div>
 </template>
+
+<script setup lang="ts">
+</script>

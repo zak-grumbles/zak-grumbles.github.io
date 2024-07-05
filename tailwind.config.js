@@ -2,7 +2,11 @@
 export default {
   content: [],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'street': 'url("~/assets/pexels-apasaric-2303337.jpg")'
+      },
+    },
   },
   plugins: [],
 }
