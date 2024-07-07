@@ -2,7 +2,13 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   compatibilityDate: "2024-07-04",
+  buildModules: [
+    '@nuxtjs/vuetify'
+  ],
+  vuetify: {
+
+  },
   modules: [
     '@nuxtjs/tailwindcss'
-  ]
+  ],
 })
