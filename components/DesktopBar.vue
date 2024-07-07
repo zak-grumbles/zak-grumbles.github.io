@@ -1,16 +1,12 @@
 <template>
-    <v-card class="absolute left-0 top-0 w-24 bg-slate-700">
-        <v-layout>
-            <v-navigation-drawer permanent location="left">
-                <p>TESTING ONCE AGAIN</p>
-            </v-navigation-drawer>
-        </v-layout>
-    </v-card>
+    <div class="absolute left-0 top-0 w-16 h-full bg-slate-900 opacity-95 shadow-lg">
+        <div>
+            <p class="text-slate-100">TESTING ONCE AGAIN</p>
+        </div>
+    </div>
 </template>
 
 <script setup lang="ts">
 </script>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>
