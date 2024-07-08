@@ -8,7 +8,8 @@ export default {
       },
       colors: {
         'stone': '#323232',
-        'plum': '#6B3CC1'
+        'plum': '#6B3CC1',
+        'subtle-gray': '#d9d9d9'
       },
       width: {
         'sidebar': '4rem'
