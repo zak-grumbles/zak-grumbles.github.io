@@ -9,6 +9,12 @@ export default {
       colors: {
         'stone': '#323232',
         'plum': '#6B3CC1'
+      },
+      width: {
+        'sidebar': '4rem'
+      },
+      margin: {
+        'sidebar': '4rem'
       }
     },
   },
