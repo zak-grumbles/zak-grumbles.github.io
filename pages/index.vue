@@ -11,13 +11,13 @@
             </DesktopNotif>
         </NotificationTray>
         <div class="ml-sidebar py-4 px-4 h-full">
-            <AppWindow class=" transition-transform ease-out duration-200" :class="{ 'scale-0': isHidden }">
+            <AppWindow v-for="proj in projects" class="transition-transform ease-out duration-200" :class="{ 'scale-0': proj.isOpen }">
                 <template v-slot:appbar>
-                    <span class="text-white pl-2">Terrain Gen Project Info</span>
+                    <span class="text-white pl-2">{{ proj.title }} Project Info</span>
                 </template>
                 <div class="py-2 px-2">
-                    <div class="text-2xl text-subtle-gray">Terrain-Gen</div>
-                    <img src="public/terrain-gen.png" class="pb-2" />
+                    <div class="text-2xl text-subtle-gray">{{ proj.title }}</div>
+                    <img v-if="proj.screenshot" :src="proj.screenshot" class="pb-2" />
                     <p>
                         Terrain-Gen started as the final project for my graphics course,
                         which was longer ago than I'd like to admit. In a nutshell, the
@@ -36,9 +36,7 @@
                     <div>
                         <div class="text-xl text-subtle-gray underline">Tech Stack</div>
                         <div class="pt-1">
-                            <i class="devicon-cplusplus-plain text-5xl font-extrabold pr-1"></i>
-                            <i class="devicon-qt-original text-5xl font-extrabold px-1"></i>
-                            <i class="devicon-opengl-plain text-5xl font-extrabold px-1"></i>
+                            <i v-for="t in proj.stack" class="text-5xl font-extrabold px-1" :key="t" :class="['devicon-' + t]"/>
                         </div>
                     </div>
                 </div>
@@ -51,10 +49,31 @@
 import zg from "~/assets/zg.svg";
 import tg from "~/assets/tg.svg";
 
+interface Project {
+    title: string,
+    screenshot?: string,
+    stack: string[],
+    isOpen: boolean
+}
+
+const projects: Ref<Project[]> = ref<Project[]>([
+    {
+        title: 'Terrain-Gen',
+        screenshot: 'terrain-gen.png',
+        stack: [
+            'cplusplus-plain',
+            'qt-original',
+            'opengl-plain'
+        ],
+        isOpen: false
+    }
+])
+
 const isHidden: Ref<boolean> = ref<boolean>(true);
 
 function toggleTGWindow(): void {
     isHidden.value = !isHidden.value;
 }
+
 
 </script>
